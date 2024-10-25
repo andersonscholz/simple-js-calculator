@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+* {
+    font-family: "Courier New", Courier, monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.calculator {
+    position: relative;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+                10px 10px 70px rgba(0, 0, 0, 0.25), 
+                inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+                inset 5px 5px 15px rgba(0, 0, 0, 0.25);
+    background: #fff;
+}
+
+#display {
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: calc(100% - 20px);
+    left: 10px;
+    border: none;
+    outline: none;
+    background-color: #a7af7c;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 22px;
+    font-family: 'Orbitron';
+    ;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    position: relative;
+    display: grid;
+    width: 80px;
+    height: 80px;
+    place-items: center;
+    margin: 8px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+                inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+                0 0 0 2px rgba(0, 0, 0, 0.75),
+                10px 20px 25px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    color: white;
+    font-size: 40px;
+}
+
+button:hover {
+    filter: brightness(1.5);
+}
+
+.calc .limpar {
+    grid-column: span 2;
+    width: 180px;
+    background: #f00;
+}
+
+.calc .mais {
+    grid-row: span 2;
+    height: 180px;
+}
+
+.calc .equal {
+    background: #2196f3;
+}
+
+.calc .equal::before {
+    background: linear-gradient(90deg, #1479c9, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
